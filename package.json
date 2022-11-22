@@ -12,7 +12,7 @@
     "url": "https://github.com/CharlesBT"
   },
   "main": "eslint-config.cjs",
-  "devDependencies": {
+  "dependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
