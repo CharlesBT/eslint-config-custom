@@ -54,6 +54,7 @@ module.exports = {
     'import',
     'promise',
     'eslint-comments',
+    'eslint-plugin-tsdoc',
     // 'cypress',
   ],
 
@@ -88,6 +89,9 @@ module.exports = {
     'promise/always-return': 'warn',
     'require-await': 'warn',
     // "no-await-in-loop": "warn", // point for optimization with Promise.all https://eslint.org/docs/rules/no-await-in-loop
+
+    // enable tsdoc
+    'tsdoc/syntax': 'warn',
 
     // vue
     // 'vue/require-default-prop': 'off',
