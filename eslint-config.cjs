@@ -48,7 +48,6 @@ module.exports = {
   ],
 
   plugins: [
-    'prettier',
     '@typescript-eslint',
     'header',
     'import',
@@ -56,6 +55,7 @@ module.exports = {
     'eslint-comments',
     'eslint-plugin-tsdoc',
     // 'cypress',
+    'prettier',
   ],
 
   rules: {
@@ -90,7 +90,7 @@ module.exports = {
     'require-await': 'warn',
     // "no-await-in-loop": "warn", // point for optimization with Promise.all https://eslint.org/docs/rules/no-await-in-loop
 
-    // enable tsdoc
+    // enable TSDoc
     'tsdoc/syntax': 'warn',
 
     // vue
