@@ -23,7 +23,6 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:promise/recommended',
     'plugin:eslint-comments/recommended',
-    // "plugin:jsdoc/recommended",
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
     'plugin:prettier/recommended', // must be the last one
@@ -55,7 +54,6 @@ module.exports = {
     'import',
     'promise',
     'eslint-comments',
-    // "jsdoc",
     // 'cypress',
   ],
 
@@ -157,15 +155,6 @@ module.exports = {
     // {
     //   files: ['cypress/e2e/**.{cy,spec}.{js,ts,jsx,tsx}'],
     //   extends: ['plugin:cypress/recommended'],
-    // },
-
-    // enable the rule specifically for JSDoc
-    // {
-    //   files: ['*.{js,mjs,cjs,ts,mts,cts,tsx}'],
-    //   extends: ['plugin:jsdoc/recommended'],
-    //   rules: {
-    //     "jsdoc/no-types": "off",
-    //   },
     // },
   ],
 
