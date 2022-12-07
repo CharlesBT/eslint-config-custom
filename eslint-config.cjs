@@ -94,8 +94,9 @@ module.exports = {
     'tsdoc/syntax': 'warn',
 
     // vue
-    // 'vue/require-default-prop': 'off',
-    // 'vue/multi-word-component-names': 'off',
+    'vue/require-default-prop': 'off',
+    'vue/multi-word-component-names': 'off',
+    'vue/no-multiple-template-root': 'off',
 
     // header
     'header/header': [
