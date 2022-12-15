@@ -16,6 +16,7 @@ specifiers:
   eslint-plugin-promise: ^6.1.1
   eslint-plugin-tsdoc: ^0.2.17
   eslint-plugin-vue: ^9.8.0
+  prettier: ^2.8.1
 
 dependencies:
   '@rushstack/eslint-patch': 1.2.0
@@ -33,6 +34,9 @@ dependencies:
   eslint-plugin-promise: 6.1.1_eslint@8.29.0
   eslint-plugin-tsdoc: 0.2.17
   eslint-plugin-vue: 9.8.0_eslint@8.29.0
+
+devDependencies:
+  prettier: 2.8.1
 
 packages:
 
@@ -1492,7 +1496,6 @@ packages:
     resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
-    dev: false
 
   /punycode/2.1.1:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}

@@ -66,8 +66,15 @@ module.exports = {
 
     // base
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+    'require-await': 'off',
     'no-empty': ['error', { allowEmptyCatch: true }],
+    // "no-undef": "off",
+
+    // TS
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    // '@typescript-eslint/no-explicit-any': 'off',
+    // '@typescript-eslint/explicit-module-boundary-types': 'error',
 
     // import
     'import/no-unresolved': 'error',
@@ -100,28 +107,6 @@ module.exports = {
   },
 
   overrides: [
-    // enable the rule specifically for JavaScript files
-    {
-      files: ['*.js', '*.mjs', '*.cjs', '*.jsx'],
-      rules: {
-        'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-        '@typescript-eslint/no-var-requires': 'off',
-        'require-await': 'off',
-      },
-    },
-
-    // enable the rule specifically for TypeScript files
-    {
-      files: ['*.ts', '*.mts', '*.cts', '*.tsx'],
-      rules: {
-        'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-        // '@typescript-eslint/no-explicit-any': 'off',
-        // '@typescript-eslint/explicit-module-boundary-types': 'error',
-      },
-    },
-
     // enable the rule specifically for Vue files
     {
       files: '*.vue',
@@ -140,9 +125,6 @@ module.exports = {
         '@vue/eslint-config-prettier',
       ],
       rules: {
-        'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-        'no-undef': 'off',
         'header/header': 'off',
       },
     },
