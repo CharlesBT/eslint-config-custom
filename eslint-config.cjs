@@ -7,7 +7,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    // extraFileExtensions: ['.vue'],
+    extraFileExtensions: ['.vue'],
   },
 
   env: {
@@ -57,12 +57,12 @@ module.exports = {
     // 'cypress',
   ],
 
+  /*
+    "off" or 0 - turn the rule off
+    "warn" or 1 - turn the rule on as a warning (doesn't affect exit code)
+    "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
+  */
   overrides: [
-    /*
-      "off" or 0 - turn the rule off
-      "warn" or 1 - turn the rule on as a warning (doesn't affect exit code)
-      "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
-    */
     // base ruless
     {
       files: ['*.js', '*.jsx', '*.mjs', '*.cjs', '*.ts', '*.tsx', '*.mts', '*.cts', '*.vue'],
@@ -83,7 +83,7 @@ module.exports = {
         'promise/catch-or-return': 'warn',
         'promise/always-return': 'warn',
         'require-await': 'warn',
-        "no-await-in-loop": "warn", // point for optimization with Promise.all https://eslint.org/docs/rules/no-await-in-loop
+        // "no-await-in-loop": "warn", // point for optimization with Promise.all https://eslint.org/docs/rules/no-await-in-loop
 
         // enable TSDoc
         // 'tsdoc/syntax': 'warn',
