@@ -25,7 +25,7 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
-    'plugin:prettier/recommended', // must be the last one
+    'plugin:prettier/recommended', // must be the last one, see: https://prettier.io/docs/en/integrating-with-linters.html
   ],
 
   ignorePatterns: [
@@ -64,14 +64,6 @@ module.exports = {
       "warn" or 1 - turn the rule on as a warning (doesn't affect exit code)
       "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
     */
-
-    // prettier
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'lf',
-      },
-    ],
 
     // base
     'no-unused-vars': 'off',
