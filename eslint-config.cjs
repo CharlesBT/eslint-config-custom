@@ -58,6 +58,44 @@ module.exports = {
   ],
 
   overrides: [
+    /*
+      "off" or 0 - turn the rule off
+      "warn" or 1 - turn the rule on as a warning (doesn't affect exit code)
+      "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
+    */
+    // base ruless
+    {
+      files: ['*.js', '*.jsx', '*.mjs', '*.cjs', '*.ts', '*.tsx', '*.mts', '*.cts', '*.vue'],
+      rules: {
+        // The core 'no-unused-vars' rules (in the eslint:recommended ruleset)
+        // does not work with type definitions.
+        'no-empty': ['error', { allowEmptyCatch: true }],
+        // "no-undef": "off",
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        // '@typescript-eslint/no-explicit-any': 'off',
+        // '@typescript-eslint/explicit-module-boundary-types': 'error',
+        'import/no-unresolved': 'error',
+        // "import/default": "off",
+        // 'import/no-named-as-default': 'off',
+        // 'import/no-named-as-default-member': 'off',
+        'promise/catch-or-return': 'warn',
+        'promise/always-return': 'warn',
+        'require-await': 'warn',
+        "no-await-in-loop": "warn", // point for optimization with Promise.all https://eslint.org/docs/rules/no-await-in-loop
+
+        // enable TSDoc
+        // 'tsdoc/syntax': 'warn',
+        'header/header': [
+          2,
+          'block',
+          [
+            ' Copyright (c) BMS Corp. All rights reserved. Licensed under the MIT License. See License.txt in the project root for license information. ',
+          ],
+        ],
+      },
+    },
     // enable the rule specifically for Vue files
     {
       files: '*.vue',
@@ -77,6 +115,9 @@ module.exports = {
       ],
       rules: {
         'header/header': 'off',
+        'vue/require-default-prop': 'off',
+        'vue/multi-word-component-names': 'off',
+        'vue/no-multiple-template-root': 'off',
       },
     },
 
@@ -86,55 +127,6 @@ module.exports = {
     //   extends: ['plugin:cypress/recommended'],
     // },
   ],
-
-  rules: {
-    /*
-      "off" or 0 - turn the rule off
-      "warn" or 1 - turn the rule on as a warning (doesn't affect exit code)
-      "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
-    */
-
-    // base
-    'no-unused-vars': 'off',
-    'require-await': 'off',
-    'no-empty': ['error', { allowEmptyCatch: true }],
-    // "no-undef": "off",
-
-    // TS
-    '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
-    // '@typescript-eslint/no-explicit-any': 'off',
-    // '@typescript-eslint/explicit-module-boundary-types': 'error',
-
-    // import
-    'import/no-unresolved': 'error',
-    // "import/default": "off",
-    // 'import/no-named-as-default': 'off',
-    // 'import/no-named-as-default-member': 'off',
-
-    //promise
-    'promise/catch-or-return': 'warn',
-    'promise/always-return': 'warn',
-    'require-await': 'warn',
-    // "no-await-in-loop": "warn", // point for optimization with Promise.all https://eslint.org/docs/rules/no-await-in-loop
-
-    // enable TSDoc
-    // 'tsdoc/syntax': 'warn',
-
-    // vue
-    'vue/require-default-prop': 'off',
-    'vue/multi-word-component-names': 'off',
-    'vue/no-multiple-template-root': 'off',
-
-    // header
-    'header/header': [
-      2,
-      'block',
-      [
-        ' Copyright (c) BMS Corp. All rights reserved. Licensed under the MIT License. See License.txt in the project root for license information. ',
-      ],
-    ],
-  },
 
   settings: {
     'import/parsers': {
