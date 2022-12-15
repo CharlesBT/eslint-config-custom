@@ -57,6 +57,36 @@ module.exports = {
     // 'cypress',
   ],
 
+  overrides: [
+    // enable the rule specifically for Vue files
+    {
+      files: '*.vue',
+      parser: 'vue-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+        extraFileExtensions: ['.vue'],
+        ecmaVersion: 'latest',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      extends: [
+        'plugin:vue/vue3-essential',
+        '@vue/eslint-config-typescript/recommended',
+        '@vue/eslint-config-prettier',
+      ],
+      rules: {
+        'header/header': 'off',
+      },
+    },
+
+    // enable the rule specifically for Cypress files
+    // {
+    //   files: ['cypress/e2e/**.{cy,spec}.{js,ts,jsx,tsx}'],
+    //   extends: ['plugin:cypress/recommended'],
+    // },
+  ],
+
   rules: {
     /*
       "off" or 0 - turn the rule off
@@ -105,36 +135,6 @@ module.exports = {
       ],
     ],
   },
-
-  overrides: [
-    // enable the rule specifically for Vue files
-    {
-      files: '*.vue',
-      parser: 'vue-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        extraFileExtensions: ['.vue'],
-        ecmaVersion: 'latest',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      extends: [
-        'plugin:vue/vue3-essential',
-        '@vue/eslint-config-typescript/recommended',
-        '@vue/eslint-config-prettier',
-      ],
-      rules: {
-        'header/header': 'off',
-      },
-    },
-
-    // enable the rule specifically for Cypress files
-    // {
-    //   files: ['cypress/e2e/**.{cy,spec}.{js,ts,jsx,tsx}'],
-    //   extends: ['plugin:cypress/recommended'],
-    // },
-  ],
 
   settings: {
     'import/parsers': {
