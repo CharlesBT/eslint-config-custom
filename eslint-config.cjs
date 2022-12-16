@@ -25,7 +25,7 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
-    'prettier', // must be the last one, see: https://prettier.io/docs/en/integrating-with-linters.html
+    'plugin:prettier/recommended', // must be the last one, see: https://prettier.io/docs/en/integrating-with-linters.html
   ],
 
   ignorePatterns: [
@@ -55,6 +55,7 @@ module.exports = {
     'eslint-comments',
     // 'eslint-plugin-tsdoc',
     // 'cypress',
+    'prettier',
   ],
 
   /*
@@ -108,9 +109,7 @@ module.exports = {
           jsx: true,
         },
       },
-      extends: [
-        'plugin:vue/vue3-essential',
-      ],
+      extends: ['plugin:vue/vue3-essential'],
       rules: {
         'header/header': 'off',
         'vue/require-default-prop': 'off',
