@@ -1,32 +1,55 @@
-/* Copyright (c) BMS Corp. All rights reserved. Licensed under the MIT License. See License.txt in the project root for license information. */
-require('@rushstack/eslint-patch/modern-module-resolution')
+/* Dependencies to install:
+base:
+  @rushstack/eslint-patch
+  prettier
+  eslint
+parsers:
+  @typescript-eslint/parser
+  vue-eslint-parser
+rules:
+  eslint-config-prettier
+  eslint-plugin-prettier
+  @typescript-eslint/eslint-plugin
+  eslint-import-resolver-typescript
+  eslint-plugin-import
+  eslint-plugin-promise
+  eslint-plugin-vue
+  eslint-plugin-header
+  eslint-plugin-eslint-comments
+  eslint-plugin-cypress
+  @vue/eslint-config-typescript
+  @nuxtjs/eslint-config-typescript
+optional :
+  eslint-plugin-tsdoc
 
+install:
+pnpm i -D @rushstack/eslint-patch prettier eslint @typescript-eslint/parser vue-eslint-parser eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-promise eslint-plugin-vue eslint-plugin-header eslint-plugin-eslint-comments eslint-plugin-cypress @vue/eslint-config-typescript @nuxtjs/eslint-config-typescript eslint-plugin-tsdoc
+
+
+See @antfu custom eslint config for more rules settings for vue/nuxt/typescript development, https://github.com/antfu/eslint-config
+*/
+
+require('@rushstack/eslint-patch/modern-module-resolution')
 module.exports = {
   root: true,
-  // parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    extraFileExtensions: ['.vue'],
-  },
-
   env: {
     browser: true,
     node: true,
     es6: true,
+    es2021: true,
     es2022: true,
-    // 'cypress/globals': true,
+    'cypress/globals': true,
   },
-
-  extends: [
-    'eslint:recommended',
-    'plugin:import/recommended',
-    'plugin:promise/recommended',
-    'plugin:eslint-comments/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/typescript',
-    'plugin:prettier/recommended', // must be the last one, see: https://prettier.io/docs/en/integrating-with-linters.html
-  ],
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    extraFileExtensions: ['.vue'],
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module',
+    ecmaVersion: 'latest',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
 
   ignorePatterns: [
     '*.min.*',
@@ -52,42 +75,102 @@ module.exports = {
     'header',
     'import',
     'promise',
-    'eslint-comments',
+    'cypress',
     // 'eslint-plugin-tsdoc',
-    // 'cypress',
     'prettier',
   ],
 
-  /*
-    "off" or 0 - turn the rule off
-    "warn" or 1 - turn the rule on as a warning (doesn't affect exit code)
-    "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
-  */
+  settings: {
+    /* eslint-import-resolver-typescript */
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.mts', '.tsx', '.d.ts'],
+    },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.mjs', '.jsx', '.ts', '.mts', '.tsx', '.d.ts'],
+      },
+    },
+  },
+
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/typescript',
+    'plugin:import/recommended',
+    'plugin:promise/recommended',
+    'plugin:vue/vue3-recommended',
+    '@vue/eslint-config-typescript',
+    '@nuxtjs/eslint-config-typescript',
+    'plugin:eslint-comments/recommended',
+    // ".eslintrc.my_project_custom_eslint_config.cjs",
+    'plugin:prettier/recommended', // must be the last one, see: https://prettier.io/docs/en/integrating-with-linters.html
+  ],
+
   overrides: [
-    // base ruless
     {
       files: ['*.js', '*.jsx', '*.mjs', '*.cjs', '*.ts', '*.tsx', '*.mts', '*.cts', '*.vue'],
       rules: {
-        // The core 'no-unused-vars' rules (in the eslint:recommended ruleset)
-        // does not work with type definitions.
-        'no-empty': ['error', { allowEmptyCatch: true }],
-        // "no-undef": "off",
+        /* eslint */
+        camelcase: 'off',
         'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-        '@typescript-eslint/no-var-requires': 'off',
-        // '@typescript-eslint/no-explicit-any': 'off',
-        // '@typescript-eslint/explicit-module-boundary-types': 'error',
-        'import/no-unresolved': 'error',
-        // "import/default": "off",
-        // 'import/no-named-as-default': 'off',
-        // 'import/no-named-as-default-member': 'off',
-        'promise/catch-or-return': 'warn',
-        'promise/always-return': 'warn',
-        'require-await': 'warn',
-        // "no-await-in-loop": "warn", // point for optimization with Promise.all https://eslint.org/docs/rules/no-await-in-loop
+        'no-var': 'warn',
+        'no-console': ['error', { allow: ['warn', 'error'] }],
+        eqeqeq: ['error', 'smart'],
+        'new-cap': ['error', { newIsCap: true, capIsNew: false, properties: true }],
+        'array-callback-return': [
+          'error',
+          {
+            allowImplicit: false,
+            checkForEach: false,
+          },
+        ],
+        'no-undef': 'off',
+        'no-empty': ['error', { allowEmptyCatch: true }],
+        'require-await': 'off',
+        'no-unused-expressions': [
+          'error',
+          {
+            allowShortCircuit: true,
+            allowTernary: true,
+            allowTaggedTemplates: true,
+          },
+        ],
+        'no-use-before-define': ['error', { functions: false, classes: false, variables: false }],
+        'no-lone-blocks': 'error',
+        'prefer-promise-reject-errors': 'error',
+        'no-await-in-loop': 'warn', // point for optimization with Promise.all https://eslint.org/docs/rules/no-await-in-loop
 
-        // enable TSDoc
+        /* @typescript-eslint/eslint-plugin */
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-use-before-define': [
+          'error',
+          { functions: false, classes: false, variables: true },
+        ],
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+
+        /* eslint-plugin-import */
+        'import/order': 'error',
+        'import/no-unresolved': 'error',
+        'import/no-mutable-exports': 'error',
+        'import/no-named-as-default': 'off',
+        'import/no-named-as-default-member': 'off',
+        // "import/default": "off",
+
+        /* eslint-plugin-vue */
+        'vue/require-default-prop': 'off',
+        'vue/multi-word-component-names': 'off',
+        'vue/no-multiple-template-root': 'off',
+
+        /* eslint-plugin-promise */
+
+        /* eslint-plugin-eslint-comments */
+
+        /* eslint-plugin-tsdoc */
         // 'tsdoc/syntax': 'warn',
+
+        /* eslint-plugin-header */
         'header/header': [
           2,
           'block',
@@ -97,48 +180,21 @@ module.exports = {
         ],
       },
     },
-    // enable the rule specifically for Vue files
+    /* Vue specfic rules */
     {
       files: '*.vue',
-      parser: 'vue-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        extraFileExtensions: ['.vue'],
-        ecmaVersion: 'latest',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      extends: ['plugin:vue/vue3-recommended'],
       rules: {
         'header/header': 'off',
-        'vue/require-default-prop': 'off',
-        'vue/multi-word-component-names': 'off',
-        'vue/no-multiple-template-root': 'off',
       },
     },
-
-    // enable the rule specifically for Cypress files
-    // {
-    //   files: ['cypress/e2e/**.{cy,spec}.{js,ts,jsx,tsx}'],
-    //   extends: ['plugin:cypress/recommended'],
-    // },
+    /* Cypress specfic rules */
+    {
+      files: ['cypress/e2e/**.{cy,spec}.{js,ts,jsx,tsx}'],
+      extends: ['plugin:cypress/recommended'],
+    },
   ],
 
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.mts', '.tsx', '.d.ts'],
-    },
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.mjs', '.jsx', '.ts', '.mts', '.tsx', '.d.ts'],
-        moduleDirectory: ['src', 'node_modules'],
-      },
-      typescript: {},
-      // typescript: {
-      //   alwaysTryTypes: true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
-      //   project: ['tsconfig.json', 'apps/*/tsconfig.json', 'packages/*/tsconfig.json'], // use an array of glob patterns
-      // },
-    },
+  rules: {
+    'prettier/prettier': 'error',
   },
 }
