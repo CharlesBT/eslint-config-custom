@@ -101,8 +101,8 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     '@vue/eslint-config-typescript',
     'plugin:eslint-comments/recommended',
-    'eslint-nuxt3-rules.cjs',
-    // ".eslintrc.my_project_custom_eslint_config.cjs", // add your custom eslint config here
+    './eslint-nuxt3-rules.cjs',
+    // "./.eslintrc.my_project_custom_eslint_config.cjs", // add your custom eslint config here
     'plugin:prettier/recommended', // must be the last one, see: https://prettier.io/docs/en/integrating-with-linters.html
   ],
 
