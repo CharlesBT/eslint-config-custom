@@ -132,7 +132,6 @@ module.exports = {
         'vars-on-top': 'error',
         'require-await': 'off',
         'no-return-assign': 'off',
-        'operator-linebreak': ['error', 'before'],
         'max-statements-per-line': ['error', { max: 1 }],
 
         /* eslint */
