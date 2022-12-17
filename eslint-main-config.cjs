@@ -118,6 +118,7 @@ module.exports = {
         'no-use-before-define': 'off',
         eqeqeq: ['error', 'smart'],
         'new-cap': 'off',
+        'no-useless-escape': 'off',
         'array-callback-return': [
           'error',
           {
@@ -162,7 +163,6 @@ module.exports = {
         /* eslint-plugin-vue */
         'vue/require-default-prop': 'off',
         'vue/multi-word-component-names': 'off',
-        'vue/no-multiple-template-root': 'off',
 
         /* eslint-plugin-promise */
 
