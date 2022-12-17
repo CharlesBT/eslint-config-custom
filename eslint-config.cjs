@@ -109,7 +109,7 @@ module.exports = {
           jsx: true,
         },
       },
-      extends: ['plugin:vue/vue3-essential'],
+      extends: ['plugin:vue/vue3-recommended'],
       rules: {
         'header/header': 'off',
         'vue/require-default-prop': 'off',
