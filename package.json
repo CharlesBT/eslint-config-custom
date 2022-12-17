@@ -1,6 +1,6 @@
 {
   "name": "@charlesbt/eslint-config-custom",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Custom eslint config",
   "repository": {
     "type": "git",
@@ -36,7 +36,8 @@
   },
   "pnpm": {
     "overrides": {
-      "eslint-plugin-import": "latest"
+      "eslint-plugin-import": "2.26.0",
+      "eslint-import-resolver-typescript": "3.5.2"
     }
   }
 }
