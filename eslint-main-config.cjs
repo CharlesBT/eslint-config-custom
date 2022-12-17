@@ -18,12 +18,11 @@ rules:
   eslint-plugin-eslint-comments
   eslint-plugin-cypress
   @vue/eslint-config-typescript
-  @nuxtjs/eslint-config-typescript
 optional :
   eslint-plugin-tsdoc
 
 install:
-pnpm i -D @rushstack/eslint-patch prettier eslint @typescript-eslint/parser vue-eslint-parser eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-promise eslint-plugin-vue eslint-plugin-header eslint-plugin-eslint-comments eslint-plugin-cypress @vue/eslint-config-typescript @nuxtjs/eslint-config-typescript eslint-plugin-tsdoc
+pnpm i -D @rushstack/eslint-patch prettier eslint @typescript-eslint/parser vue-eslint-parser eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-promise eslint-plugin-vue eslint-plugin-header eslint-plugin-eslint-comments eslint-plugin-cypress @vue/eslint-config-typescript eslint-plugin-tsdoc
 
 
 See @antfu custom eslint config for more rules settings for vue/nuxt/typescript development, https://github.com/antfu/eslint-config
@@ -89,6 +88,7 @@ module.exports = {
       node: {
         extensions: ['.js', '.mjs', '.jsx', '.ts', '.mts', '.tsx', '.d.ts'],
       },
+      typescript: {},
     },
   },
 
@@ -100,9 +100,9 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:vue/vue3-recommended',
     '@vue/eslint-config-typescript',
-    '@nuxtjs/eslint-config-typescript',
     'plugin:eslint-comments/recommended',
-    // ".eslintrc.my_project_custom_eslint_config.cjs",
+    'eslint-nuxt3-rules.cjs',
+    // ".eslintrc.my_project_custom_eslint_config.cjs", // add your custom eslint config here
     'plugin:prettier/recommended', // must be the last one, see: https://prettier.io/docs/en/integrating-with-linters.html
   ],
 
@@ -152,11 +152,11 @@ module.exports = {
 
         /* eslint-plugin-import */
         'import/order': 'error',
+        'import/first': 'error',
         'import/no-unresolved': 'error',
         'import/no-mutable-exports': 'error',
         'import/no-named-as-default': 'off',
         'import/no-named-as-default-member': 'off',
-        // "import/default": "off",
 
         /* eslint-plugin-vue */
         'vue/require-default-prop': 'off',

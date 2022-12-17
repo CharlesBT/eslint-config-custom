@@ -1,6 +1,6 @@
 {
   "name": "@charlesbt/eslint-config-custom",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "description": "Custom eslint config",
   "repository": {
     "type": "git",
@@ -11,9 +11,8 @@
     "email": "charles.brebant@gmail.com",
     "url": "https://github.com/CharlesBT"
   },
-  "main": "eslint-config.cjs",
+  "main": "eslint-main-config.cjs",
   "dependencies": {
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@rushstack/eslint-patch": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
