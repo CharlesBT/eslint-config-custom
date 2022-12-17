@@ -114,9 +114,10 @@ module.exports = {
         camelcase: 'off',
         'no-unused-vars': 'off',
         'no-var': 'warn',
-        'no-console': ['error', { allow: ['warn', 'error'] }],
+        'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
+        'no-use-before-define': 'off',
         eqeqeq: ['error', 'smart'],
-        'new-cap': ['error', { newIsCap: true, capIsNew: false, properties: true }],
+        'new-cap': 'off',
         'array-callback-return': [
           'error',
           {
