@@ -110,15 +110,7 @@ module.exports = {
     {
       files: ['*.js', '*.jsx', '*.mjs', '*.cjs', '*.ts', '*.tsx', '*.mts', '*.cts', '*.vue'],
       rules: {
-        /* eslint */
-        camelcase: 'off',
-        'no-unused-vars': 'off',
-        'no-var': 'warn',
-        'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
-        'no-use-before-define': 'off',
-        eqeqeq: ['error', 'smart'],
-        'new-cap': 'off',
-        'no-useless-escape': 'off',
+        /* eslint best-practice */
         'array-callback-return': [
           'error',
           {
@@ -126,9 +118,31 @@ module.exports = {
             checkForEach: false,
           },
         ],
+        'block-scoped-var': 'error',
+        'consistent-return': 'off',
+        complexity: ['off', 11],
+        eqeqeq: ['error', 'smart'],
+        'no-alert': 'warn',
+        'no-case-declarations': 'error',
+        'no-multi-spaces': 'error',
+        'no-multi-str': 'error',
+        'no-with': 'error',
+        'no-void': 'error',
+        'no-useless-escape': 'off',
+        'vars-on-top': 'error',
+        'require-await': 'off',
+        'no-return-assign': 'off',
+        'operator-linebreak': ['error', 'before'],
+        'max-statements-per-line': ['error', { max: 1 }],
+
+        /* eslint */
+        camelcase: 'off',
+        'no-unused-vars': 'off',
+        'no-var': 'warn',
+        'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
+        'new-cap': 'off',
         'no-undef': 'off',
         'no-empty': ['error', { allowEmptyCatch: true }],
-        'require-await': 'off',
         'no-unused-expressions': [
           'error',
           {
@@ -137,7 +151,7 @@ module.exports = {
             allowTaggedTemplates: true,
           },
         ],
-        'no-use-before-define': ['error', { functions: false, classes: false, variables: false }],
+        'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
         'no-lone-blocks': 'error',
         'prefer-promise-reject-errors': 'error',
         'no-await-in-loop': 'warn', // point for optimization with Promise.all https://eslint.org/docs/rules/no-await-in-loop

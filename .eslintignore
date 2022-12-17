@@ -10,6 +10,7 @@ uploads
 node_modules
 build
 dist
+dist-*
 pnpm-lock.yaml
 
 # CHROME CONFIG

@@ -1,6 +1,6 @@
 {
   "name": "@charlesbt/eslint-config-custom",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Custom eslint config",
   "repository": {
     "type": "git",
@@ -12,6 +12,9 @@
     "url": "https://github.com/CharlesBT"
   },
   "main": "eslint-main-config.cjs",
+  "scripts": {
+    "format": "prettier --write ."
+  },
   "dependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
