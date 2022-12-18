@@ -71,7 +71,7 @@ module.exports = {
 
   plugins: [
     '@typescript-eslint',
-    'header',
+    // 'header',
     'import',
     'promise',
     'cypress',
@@ -185,14 +185,14 @@ module.exports = {
         // 'tsdoc/syntax': 'warn',
 
         /* eslint-plugin-header */
-        'header/header': 'off',
+        // 'header/header': 'off',
       },
     },
     /* Vue specfic rules */
     {
       files: '*.vue',
       rules: {
-        'header/header': 'off',
+        // 'header/header': 'off',
       },
     },
     /* Cypress specfic rules */
