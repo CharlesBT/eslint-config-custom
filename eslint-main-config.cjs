@@ -185,13 +185,7 @@ module.exports = {
         // 'tsdoc/syntax': 'warn',
 
         /* eslint-plugin-header */
-        'header/header': [
-          2,
-          'block',
-          [
-            ' Copyright (c) BMS Corp. All rights reserved. Licensed under the MIT License. See License.txt in the project root for license information. ',
-          ],
-        ],
+        'header/header': 'off',
       },
     },
     /* Vue specfic rules */
