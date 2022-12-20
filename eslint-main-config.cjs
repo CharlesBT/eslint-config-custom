@@ -176,6 +176,9 @@ module.exports = {
         /* eslint-plugin-vue */
         'vue/require-default-prop': 'off',
         'vue/multi-word-component-names': 'off',
+        'vue/component-name-in-template-casing': ['error', 'PascalCase'],
+        'vue/component-options-name-casing': ['error', 'PascalCase'],
+        'vue/custom-event-name-casing': ['error', 'camelCase'],
 
         /* eslint-plugin-promise */
 
