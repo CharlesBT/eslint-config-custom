@@ -106,16 +106,16 @@ module.exports = {
     {
       // These pages are not used directly by users so they can have one-word names.
       files: [
-        '**/pages/**/*.{js,ts,vue}',
-        '**/layouts/**/*.{js,ts,vue}',
-        '**/app.{js,ts,vue}',
-        '**/error.{js,ts,vue}',
+        './pages/**/*.{js,ts,vue}',
+        './layouts/**/*.{js,ts,vue}',
+        './app.{js,ts,vue}',
+        './error.{js,ts,vue}',
       ],
       rules: { 'vue/multi-word-component-names': 'off' },
     },
     {
       // Pages and layouts are required to have a single root element if transitions are enabled.
-      files: ['**/pages/**/*.{js,ts,vue}', '**/layouts/**/*.{js,ts,vue}'],
+      files: ['./pages/**/*.{js,ts,vue}', './layouts/**/*.{js,ts,vue}'],
       rules: { 'vue/no-multiple-template-root': 'error' },
     },
   ],
