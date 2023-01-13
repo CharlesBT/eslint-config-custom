@@ -99,6 +99,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:promise/recommended',
     'plugin:vue/vue3-recommended',
+    'plugin:vuetify/base',
     '@vue/eslint-config-typescript',
     'plugin:eslint-comments/recommended',
     './eslint-nuxt3-rules.cjs',

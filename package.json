@@ -1,6 +1,6 @@
 {
   "name": "@charlesbt/eslint-config-custom",
-  "version": "1.2.13",
+  "version": "1.2.14",
   "description": "Custom eslint config",
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-tsdoc": "0.2.17",
     "eslint-plugin-vue": "9.8.0",
+    "eslint-plugin-vuetify": "2.0.0-beta.2",
     "vue-eslint-parser": "9.1.0"
   },
   "devDependencies": {
