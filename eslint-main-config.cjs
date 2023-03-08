@@ -180,6 +180,7 @@ module.exports = {
         'vue/component-name-in-template-casing': ['error', 'PascalCase'],
         'vue/component-options-name-casing': ['error', 'PascalCase'],
         'vue/valid-v-slot': 'off',
+        'vue/v-on-event-hyphenation': 'off',
 
         /* eslint-plugin-promise */
 
