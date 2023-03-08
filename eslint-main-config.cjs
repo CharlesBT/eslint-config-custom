@@ -179,6 +179,7 @@ module.exports = {
         'vue/multi-word-component-names': 'off',
         'vue/component-name-in-template-casing': ['error', 'PascalCase'],
         'vue/component-options-name-casing': ['error', 'PascalCase'],
+        'vue/valid-v-slot': 'off',
 
         /* eslint-plugin-promise */
 
