@@ -1,6 +1,6 @@
 {
   "name": "@charlesbt/eslint-config-custom",
-  "version": "1.2.22pnpm import",
+  "version": "1.2.23",
   "description": "Custom eslint config",
   "repository": {
     "type": "git",
@@ -17,13 +17,13 @@
   },
   "dependencies": {
     "@rushstack/eslint-patch": "1.2.0",
-    "@typescript-eslint/eslint-plugin": "5.56.0",
-    "@typescript-eslint/parser": "5.56.0",
+    "@typescript-eslint/eslint-plugin": "5.57.1",
+    "@typescript-eslint/parser": "5.57.1",
     "@vue/eslint-config-typescript": "11.0.2",
-    "eslint": "8.36.0",
+    "eslint": "8.37.0",
     "eslint-config-prettier": "8.8.0",
-    "eslint-import-resolver-typescript": "3.5.3",
-    "eslint-plugin-cypress": "2.12.1",
+    "eslint-import-resolver-typescript": "3.5.5",
+    "eslint-plugin-cypress": "2.13.2",
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-header": "3.1.1",
     "eslint-plugin-import": "2.27.5",
@@ -31,8 +31,8 @@
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-tsdoc": "0.2.17",
     "eslint-plugin-vue": "9.10.0",
-    "eslint-plugin-vuetify": "2.0.0-beta.2",
-    "vue-eslint-parser": "9.1.0"
+    "eslint-plugin-vuetify": "2.0.0-beta.3",
+    "vue-eslint-parser": "9.1.1"
   },
   "devDependencies": {
     "prettier": "2.8.7"
