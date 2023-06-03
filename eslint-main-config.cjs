@@ -111,7 +111,7 @@ module.exports = {
     {
       files: ['*.js', '*.jsx', '*.mjs', '*.cjs', '*.ts', '*.tsx', '*.mts', '*.cts', '*.vue'],
       rules: {
-        /* eslint best-practice */
+        // eslint best-practices
         'array-callback-return': [
           'error',
           {
