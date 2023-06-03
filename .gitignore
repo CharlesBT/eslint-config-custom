@@ -3,16 +3,9 @@
 
 # NODE
 node_modules
-dist
-dist-*
-build
-release
 
 # .env.*.local
 *.local
-
-# Docs
-!docs
 
 # Logs
 logs
