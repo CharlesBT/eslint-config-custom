@@ -1,6 +1,6 @@
 {
   "name": "@charlesbt/eslint-config-custom",
-  "version": "1.2.41",
+  "version": "1.2.42",
   "description": "Custom eslint config",
   "repository": {
     "type": "git",

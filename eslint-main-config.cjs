@@ -158,10 +158,10 @@ module.exports = {
 
         /* @typescript-eslint/eslint-plugin */
         '@typescript-eslint/no-unused-vars': 'off',
-        '@typescript-eslint/no-use-before-define': [
-          'error',
-          { functions: false, classes: false, variables: true },
-        ],
+        // '@typescript-eslint/no-use-before-define': [
+        //   'error',
+        //   { functions: false, classes: false, variables: true },
+        // ],
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
