@@ -16,7 +16,7 @@ dependencies:
     version: 5.62.0(eslint@8.46.0)(typescript@5.1.6)
   '@vue/eslint-config-typescript':
     specifier: 11.0.3
-    version: 11.0.3(eslint-plugin-vue@9.16.1)(eslint@8.46.0)(typescript@5.1.6)
+    version: 11.0.3(eslint-plugin-vue@9.15.1)(eslint@8.46.0)(typescript@5.1.6)
   eslint-config-prettier:
     specifier: 8.9.0
     version: 8.9.0(eslint@8.46.0)
@@ -45,8 +45,8 @@ dependencies:
     specifier: 0.2.17
     version: 0.2.17
   eslint-plugin-vue:
-    specifier: 9.16.1
-    version: 9.16.1(eslint@8.46.0)
+    specifier: 9.15.1
+    version: 9.15.1(eslint@8.46.0)
   eslint-plugin-vuetify:
     specifier: 2.0.5
     version: 2.0.5(eslint@8.46.0)(vuetify@3.3.11)
@@ -376,7 +376,7 @@ packages:
       '@vue/shared': 3.3.4
     dev: false
 
-  /@vue/eslint-config-typescript@11.0.3(eslint-plugin-vue@9.16.1)(eslint@8.46.0)(typescript@5.1.6):
+  /@vue/eslint-config-typescript@11.0.3(eslint-plugin-vue@9.15.1)(eslint@8.46.0)(typescript@5.1.6):
     resolution: {integrity: sha512-dkt6W0PX6H/4Xuxg/BlFj5xHvksjpSlVjtkQCpaYJBIEuKj2hOVU7r+TIe+ysCwRYFz/lGqvklntRkCAibsbPw==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -390,7 +390,7 @@ packages:
       '@typescript-eslint/eslint-plugin': 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.46.0)(typescript@5.1.6)
       '@typescript-eslint/parser': 5.62.0(eslint@8.46.0)(typescript@5.1.6)
       eslint: 8.46.0
-      eslint-plugin-vue: 9.16.1(eslint@8.46.0)
+      eslint-plugin-vue: 9.15.1(eslint@8.46.0)
       typescript: 5.1.6
       vue-eslint-parser: 9.3.1(eslint@8.46.0)
     transitivePeerDependencies:
@@ -969,8 +969,8 @@ packages:
       '@microsoft/tsdoc-config': 0.16.2
     dev: false
 
-  /eslint-plugin-vue@9.16.1(eslint@8.46.0):
-    resolution: {integrity: sha512-2FtnTqazA6aYONfDuOZTk0QzwhAwi7Z4+uJ7+GHeGxcKapjqWlDsRWDenvyG/utyOfAS5bVRmAG3cEWiYEz2bA==}
+  /eslint-plugin-vue@9.15.1(eslint@8.46.0):
+    resolution: {integrity: sha512-CJE/oZOslvmAR9hf8SClTdQ9JLweghT6JCBQNrT2Iel1uVw0W0OLJxzvPd6CxmABKCvLrtyDnqGV37O7KQv6+A==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
@@ -994,7 +994,7 @@ packages:
       vuetify: ^3.0.0
     dependencies:
       eslint: 8.46.0
-      eslint-plugin-vue: 9.16.1(eslint@8.46.0)
+      eslint-plugin-vue: 9.15.1(eslint@8.46.0)
       requireindex: 1.2.0
       vuetify: 3.3.11(typescript@5.1.6)(vue@3.3.4)
     transitivePeerDependencies:
