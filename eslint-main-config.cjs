@@ -102,7 +102,8 @@ module.exports = {
     // 'plugin:vuetify/base', // waiting for stable release
     '@vue/eslint-config-typescript',
     'plugin:eslint-comments/recommended',
-    './eslint-nuxt3-rules.cjs',
+    '@nuxt/eslint-config',
+    // './eslint-nuxt3-rules.cjs',
     // "./.eslintrc.my_project_custom_eslint_config.cjs", // add your custom eslint config here
     'plugin:prettier/recommended', // must be the last one, see: https://prettier.io/docs/en/integrating-with-linters.html
   ],
