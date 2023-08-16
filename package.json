@@ -1,6 +1,6 @@
 {
   "name": "@charlesbt/eslint-config-custom",
-  "version": "1.2.55",
+  "version": "1.2.56",
   "description": "Custom eslint config",
   "repository": {
     "type": "git",
@@ -38,6 +38,6 @@
   },
   "devDependencies": {
     "eslint": "8.47.0",
-    "prettier": "3.0.1"
+    "prettier": "3.0.2"
   }
 }
