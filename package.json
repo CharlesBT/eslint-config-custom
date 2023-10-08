@@ -1,6 +1,6 @@
 {
   "name": "@charlesbt/eslint-config-custom",
-  "version": "1.2.61",
+  "version": "1.2.62",
   "description": "Custom eslint config",
   "repository": {
     "type": "git",
@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "@rushstack/eslint-patch": "1.5.1",
-    "@typescript-eslint/eslint-plugin": "5.62.0",
-    "@typescript-eslint/parser": "5.62.0",
+    "@typescript-eslint/eslint-plugin": "6.7.4",
+    "@typescript-eslint/parser": "6.7.4",
     "@vue/eslint-config-typescript": "12.0.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-import-resolver-typescript": "3.6.1",
