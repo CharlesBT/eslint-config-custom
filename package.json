@@ -1,6 +1,10 @@
 {
   "name": "@charlesbt/eslint-config-custom",
+<<<<<<< HEAD
   "version": "1.3.1",
+=======
+  "version": "1.3.0",
+>>>>>>> fc5bf632116f92cd0c17f73e626d0bbd7a525441
   "description": "Custom eslint config",
   "repository": {
     "type": "git",
@@ -37,7 +41,10 @@
     "vue-eslint-parser": "9.4.2"
   },
   "devDependencies": {
-    "eslint": "8.57.0",
+    "eslint": "^8.57.0",
     "prettier": "3.2.5"
+  },
+  "peerDependencies": {
+    "eslint": "^8.57.0 || ^9.0.0"
   }
 }
