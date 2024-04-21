@@ -50,7 +50,8 @@ module.exports = {
     },
   },
 
-  ignorePatterns: [
+  ignores: [
+    'node_modules/**',
     '*.min.*',
     '*.d.ts',
     'CHANGELOG.md',
