@@ -182,6 +182,7 @@ module.exports = {
         'vue/valid-v-slot': 'off',
         'vue/v-on-event-hyphenation': 'off',
         'vue/no-setup-props-destructure': 'off',
+        'vue/no-v-html': 'off',
 
         /* eslint-plugin-promise */
 
