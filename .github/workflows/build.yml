@@ -17,7 +17,7 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v4
 
-      - name: Install Node
+      - name: Set up Node.js version ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
@@ -27,6 +27,9 @@ jobs:
         uses: pnpm/action-setup@v3
         with:
           version: ${{ env.PNPM_VERSION }}
+
+      - name: Install packages
+        run: pnpm install
 
       - name: Build
         run: pnpm run build
