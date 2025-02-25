@@ -21,7 +21,16 @@ export default [
     },
   },
   {
-    ignores: ['**/node_modules', '**/dist'],
+    ignores: [
+      '**/node_modules',
+      '**/pnpm-lock.yaml',
+      '**/vscode-chrome-debug-userdatadir',
+      '**/dist',
+      '**/.cache',
+      '**/.temp',
+      '**/logs',
+      '**/docs',
+    ],
   },
   js.configs.recommended,
   ...ts.configs.recommended,
