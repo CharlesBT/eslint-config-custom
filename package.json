@@ -1,6 +1,6 @@
 {
   "name": "@charlesbt/eslint-config-custom",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Custom eslint config",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   "scripts": {
     "build": "unbuild",
     "prepack": "unbuild",
-    "lint": "eslint --fix .",
+    "lint": "unbuild && eslint --fix .",
     "format": "prettier --write .",
     "clean": "rimraf -g ./node_modules ./pnpm-lock.yaml ./.pnpm-debug.log",
     "reinstall": "pnpm clean && pnpm install"
@@ -36,6 +36,7 @@
     "@eslint/js": "^9.21.0",
     "@vue/eslint-config-typescript": "^14.4.0",
     "eslint-config-prettier": "^10.0.1",
+    "eslint-import-resolver-typescript": "^3.8.3",
     "eslint-plugin-import-x": "^4.6.1",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-promise": "^7.2.1",

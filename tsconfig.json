@@ -9,7 +9,6 @@
     "resolveJsonModule": true,
     "typeRoots": ["./types"]
   },
-  // "exclude": ["**/dist/**", "**/.nuxt/**", "**/playground/**"],
   "ts-node": {
     // ts-node config
     "files": true,

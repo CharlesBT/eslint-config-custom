@@ -7,10 +7,12 @@ import promise from 'eslint-plugin-promise'
 import importX from 'eslint-plugin-import-x'
 import prettierRecommended from 'eslint-plugin-prettier/recommended'
 
+// eslint-plugin-import-x needs eslint-import-resolver-typescript in package.json dependencies
+
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    name: '@charlesbt/eslint-config-custom',
+    name: '@charlesbt/eslint-config-custom2',
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -18,22 +20,38 @@ export default [
       },
     },
   },
+  {
+    ignores: ['**/node_modules', '**/dist'],
+  },
   js.configs.recommended,
   ...ts.configs.recommended,
   ...vue.configs['flat/essential'],
   ...vuetify.configs['flat/base'],
   promise.configs['flat/recommended'],
+
+  // eslint-plugin-import-x'
   importX.flatConfigs.recommended,
+  importX.flatConfigs.typescript,
   {
-    ignores: ['**/node_modules', '**/dist'],
+    files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,vue}'],
+    // languageOptions: {
+    //   parser: ts.parser,
+    //   ecmaVersion: 'latest',
+    //   sourceType: 'module',
+    // },
+    rules: {
+      'no-unused-vars': 'off',
+      'import-x/no-dynamic-require': 'warn',
+      'import-x/no-nodejs-modules': 'warn',
+    },
   },
-  {
-    files: ['**/*.{js,mjs,cjs,ts,vue}'],
-  },
+  // eslint-plugin-vue
   {
     files: ['**/*.vue'],
     languageOptions: {
-      parserOptions: { parser: ts.parser },
+      parserOptions: {
+        parser: ts.parser,
+      },
     },
     rules: {
       /* eslint-plugin-vue */
@@ -189,8 +207,8 @@ export default [
       /* eslint-plugin-tsdoc */
       // 'tsdoc/syntax': 'warn',
     },
-
-    // Prettier configuration (MUST BE LAST)
-    prettierRecommended,
   },
+
+  // Prettier configuration (MUST BE LAST)
+  prettierRecommended,
 ]

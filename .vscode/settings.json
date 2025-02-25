@@ -1,5 +1,4 @@
 {
-
   // Editor
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -38,10 +37,8 @@
   // ESLint
   "eslint.useFlatConfig": true, // Enable the ESlint flat config support
 
-
   // NPM package manager for running scripts
   "npm.packageManager": "pnpm",
-
 
   // Code Runner extension
   "code-runner.clearPreviousOutput": true,
@@ -49,4 +46,5 @@
   "code-runner.executorMap": {
     "javascript": "node",
     "typescript": "node --no-warnings=ExperimentalWarning --loader ts-node/esm"
-  },
+  }
+}
