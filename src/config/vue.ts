@@ -49,6 +49,7 @@ export default [
       'prefer-spread': 'error', // ts transpiles spread to apply, so no need for manual apply
       'valid-typeof': 'off', // ts(2367)
       'vue/no-multiple-template-root': 'off', // disabled by default as multiple root elements are allowed in Vue 3
+      'vue/attribute-hyphenation': 'off',
     },
   },
   {

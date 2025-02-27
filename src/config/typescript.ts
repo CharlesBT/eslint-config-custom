@@ -30,4 +30,11 @@ export default [
       '@typescript-eslint/no-require-imports': 'off',
     },
   },
+  {
+    name: '@charlesbt/eslint-config-custom/ts/vue',
+    files: ['**/*.vue'],
+    rules: {
+      '@typescript-eslint/unified-signatures': 'off',
+    },
+  },
 ]
