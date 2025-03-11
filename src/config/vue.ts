@@ -1,11 +1,13 @@
 import ts from 'typescript-eslint'
-import vue from 'eslint-plugin-vue'
+import nuxt from '@nuxt/eslint-config'
+// import vue from 'eslint-plugin-vue'
 import vuetify from 'eslint-plugin-vuetify'
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   // eslint-plugin-vue //
-  ...vue.configs['flat/essential'],
+  nuxt,
+  // ...vue.configs['flat/essential'],
   ...vuetify.configs['flat/base'],
   {
     name: '@charlesbt/eslint-config-custom/vue',
