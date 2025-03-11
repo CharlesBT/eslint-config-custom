@@ -21,6 +21,7 @@ export default [
       '@typescript-eslint/no-var-requires': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-require-imports': ['error', { allowAsImport: true }],
+      '@typescript-eslint/triple-slash-reference': 'off',
     },
   },
   {
