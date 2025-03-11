@@ -26,7 +26,7 @@ export default [
   ...ts.configs.recommended,
   ...confJs,
   ...confTs,
-  // ...confVue,
+  ...confVue,
   ...confImports,
   ...confPromises,
 

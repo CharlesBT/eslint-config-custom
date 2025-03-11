@@ -6,7 +6,7 @@ import vuetify from 'eslint-plugin-vuetify'
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   // eslint-plugin-vue //
-  nuxt,
+  // nuxt,
   // ...vue.configs['flat/essential'],
   ...vuetify.configs['flat/base'],
   {
