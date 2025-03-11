@@ -6,7 +6,7 @@ import vuetify from 'eslint-plugin-vuetify'
 export default [
   // eslint-plugin-vue //
   ...vue.configs['flat/recommended'],
-  // ...vuetify.configs['flat/base'],
+  // ...vuetify.configs['flat/base'], // commented as create a vue plugin error since using eslint-plugin-vue v10
   {
     name: '@charlesbt/eslint-config-custom/vue',
     files: ['**/*.vue'],
