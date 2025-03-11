@@ -5,8 +5,8 @@ import vuetify from 'eslint-plugin-vuetify'
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   // eslint-plugin-vue //
-  ...vue.configs['flat/essential'],
-  ...vuetify.configs['flat/base'],
+  ...vue.configs['flat/recommended'],
+  // ...vuetify.configs['flat/base'],
   {
     name: '@charlesbt/eslint-config-custom/vue',
     files: ['**/*.vue'],
