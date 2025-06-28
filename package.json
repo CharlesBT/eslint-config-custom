@@ -1,6 +1,6 @@
 {
   "name": "@charlesbt/eslint-config-custom",
-  "version": "3.5.8",
+  "version": "3.6.0",
   "description": "Custom eslint config",
   "repository": {
     "type": "git",
@@ -35,22 +35,22 @@
     "pkg:outdated": "pnpm -r outdated"
   },
   "dependencies": {
-    "@eslint/js": "^9.29.0",
-    "@vue/eslint-config-typescript": "^14.5.0",
+    "@eslint/js": "^9.30.0",
+    "@vue/eslint-config-typescript": "^14.5.1",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-import-resolver-typescript": "^4.4.3",
-    "eslint-plugin-import-x": "^4.15.2",
-    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-prettier": "^5.5.1",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-vue": "^10.2.0",
     "eslint-plugin-vuetify": "^2.5.2",
     "globals": "^16.2.0",
-    "typescript-eslint": "^8.34.0"
+    "typescript-eslint": "^8.35.0"
   },
   "devDependencies": {
     "@types/node": "22",
-    "eslint": "^9.29.0",
-    "prettier": "^3.5.3",
+    "eslint": "^9.30.0",
+    "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "unbuild": "^3.5.0"
